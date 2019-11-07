@@ -35,7 +35,7 @@ class SpecialIncidentReports extends SpecialPage {
 	public function showForm(
 		int $id,
 		bool $edit,
-		Database $dbw,
+		DBConnRef $dbw,
 		bool $isPublished
 	) {
 		if ( !$isPublished && !$this->getContext()->getUser()->isAllowed( 'editincidents' ) ) {
@@ -64,7 +64,7 @@ class SpecialIncidentReports extends SpecialPage {
 
 	}
 
-	public function showLanding( Database $dbw ) {
+	public function showLanding( DBConnRef $dbw ) {
 		global $wgIncidentReportingServices;
 
 		$type = $this->getRequest()->getText( 'type' );

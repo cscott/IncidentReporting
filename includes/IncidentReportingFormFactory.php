@@ -2,7 +2,7 @@
 
 class IncidentReportingFormFactory {
 	public function getFormDescriptor(
-		Database $dbw,
+		DBConnRef $dbw,
 		int $id,
 		bool $edit,
 		IContextSource $context
@@ -458,7 +458,7 @@ class IncidentReportingFormFactory {
 	public function getForm(
 		int $id,
 		bool $edit,
-		Database $dbw,
+		DBConnRef $dbw,
 		IContextSource $context,
 		$formClass = IncidentReportingOOUIForm::class
 	) {
@@ -505,7 +505,7 @@ class IncidentReportingFormFactory {
 		array $formData,
 		HTMLForm $form,
 		int $id,
-		Database $dbw,
+		DBConnRef $dbw,
 		IContextSource $context
 	) {
 		if ( isset( $formData['view'] ) && $formData['view'] ) {
